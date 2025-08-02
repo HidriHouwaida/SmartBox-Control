@@ -3,7 +3,7 @@
 ## 📌 Description
 Valise domotique autonome permettant le contrôle :
 - ✅ **Manuel** via boutons physiques
-- 💻 **Logiciel** via Loxone Config sur PC
+- 💻 **Logiciel** Logic Machine sur PC
 - 📱 **Mobile** via application Android dédiée
 
 ## 🎯 Fonctionnalités
@@ -26,7 +26,7 @@ Valise domotique autonome permettant le contrôle :
 
 ```mermaid
 graph TB
-    A[Interface Manuelle] -->|Fils| B[Loxone Miniserver]
+    A[Interface Manuelle] -->|Fils| B[Logic Machine]
     C[PC Loxone Config] -->|Ethernet| B
     D[App Android] -->|WiFi| B
     B --> E[Relais KNX]
