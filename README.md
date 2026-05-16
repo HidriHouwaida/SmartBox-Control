@@ -1,34 +1,46 @@
-# 🧰 SmartBox-Control - Valise Domotique
+# 🧰 SmartBox-Control — Smart Home Suitcase
 
 ## 📌 Description
-Valise domotique autonome permettant le contrôle :
-- ✅ **Manuel** via boutons physiques
-- 💻 **Logiciel** Logic Machine sur PC
-- 📱 **Mobile** via application Android dédiée
 
-## 🎯 Fonctionnalités
-### Contrôles Globaux
-- 🚀 **ON/OFF total** de toutes les lampes
-- 🌞 **Montée/descente simultanée** des stores
+An autonomous smart home demo unit enabling control via:
+- ✅ **Manual** — physical buttons
+- 💻 **Software** — Logic Machine on PC
+- 📱 **Mobile** — dedicated Android application
 
-### Contrôles Individuels
-- 💡 **Lampe par lampe** (allumage/extinction)
-- 🪟 **Store par store** (positionnement précis)
+---
 
-## 🛠️ Configuration Technique
-| Composant | Modèle | Qty |
-|-----------|--------|-----|
-| Module Loxone | Miniserver Gen2 | 1 |
-| Relais | KNX 8x230V | 1 |
-| Alimentation | MeanWell 24V/5A | 1 |
-| Lampes | LED 12W 2700K | 4 |
-| Stores | Somfy Sonesse 30 | 2 |
+## 🎯 Features
+
+### Global Controls
+- 🚀 **Master ON/OFF** for all lights simultaneously
+- 🌞 **Simultaneous raise/lower** of all blinds
+
+### Individual Controls
+- 💡 **Light by light** — turn each lamp on/off independently
+- 🪟 **Blind by blind** — precise positioning of each shutter
+
+---
+
+## 🛠️ Technical Configuration
+
+| Component       | Model                | Qty |
+|-----------------|----------------------|-----|
+| Loxone Module   | Miniserver Gen2      | 1   |
+| Relay           | KNX 8x230V           | 1   |
+| Power Supply    | MeanWell 24V/5A      | 1   |
+| Lights          | LED 12W 2700K        | 4   |
+| Blinds          | Somfy Sonesse 30     | 2   |
+
+---
+
+## 🔌 System Architecture
 
 ```mermaid
 graph TB
-    A[Interface Manuelle] -->|Fils| B[Logic Machine]
+    A[Manual Interface] -->|Wires| B[Logic Machine]
     C[PC Loxone Config] -->|Ethernet| B
-    D[App Android] -->|WiFi| B
-    B --> E[Relais KNX]
-    E --> F[Lampes]
-    E --> G[Stores]
+    D[Android App] -->|WiFi| B
+    B --> E[KNX Relay]
+    E --> F[Lights]
+    E --> G[Blinds]
+```
